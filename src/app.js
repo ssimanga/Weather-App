@@ -8,7 +8,7 @@ weatherForm.addEventListener('submit', async(e)=>{
 
     if (city === '') return;
 
-    const apiKey = 'ba5993fc3ce596d6a1ceaff8a08d9861';
+    const apiKey = 'Replace with your apikey';
     const url= `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${apiKey}&units=metric`
     
 
