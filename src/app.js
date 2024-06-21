@@ -1,6 +1,6 @@
 const weatherForm = document.querySelector('#weatherForm');
 const cityInput = document.querySelector('#cityInput');
-const weatherResult = document.querySelector('#waetherResult');
+const weatherResult = document.querySelector('#weatherResult');
 
 weatherForm.addEventListener('submit', async(e)=>{
     e.preventDefault();
@@ -9,7 +9,8 @@ weatherForm.addEventListener('submit', async(e)=>{
     if (city === '') return;
 
     const apiKey = 'ba5993fc3ce596d6a1ceaff8a08d9861';
-    const url = `https://api.openweathermap.org/data/2.5/weather?=${city}&appid=${apiKey}&units=metric`;
+    const url= `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${apiKey}&units=metric`
+    
 
     try {
         const response = await fetch(url);
